@@ -161,14 +161,14 @@ const Audience = () => {
   return (
     <div className="app-content">
       <Navbar/>
-      <div className="flex justify-between items-center px-3 my-2">
+      <div className="flex justify-between items-center flex-wrap px-3 my-2">
         <div>
           <p>Audience List</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <span className="search-box">
             <input
-              className="search-audience"
+              className="search-audience rounded-md py-1"
               placeholder="Search..."
               type="text"
               onChange={handleSearch}
@@ -177,7 +177,7 @@ const Audience = () => {
           <select
             id="tagFilter"
             value={selectedTag}
-            className="selectbox-1 px-2"
+            className="selectbox-1 px-2 rounded-md py-1"
             onChange={handleTagFilter}
           >
             <option value="tümü">All</option>
@@ -191,7 +191,7 @@ const Audience = () => {
           </select>
           <select
             id="statusFilter"
-            className="selectbox-2 ps-2 pe-12"
+            className="selectbox-2 ps-2 pe-12 rounded-md py-1"
             value={selectedStatus}
             onChange={handleStatusFilter}
           >
@@ -201,7 +201,7 @@ const Audience = () => {
           </select>
         </div>
       </div>
-      <div className="audience-list relative overflow-x-auto max-h-[750px] shadow-md sm:rounded-lg rounded-md border-2 border-gray-200">
+      <div className="audience-list relative overflow-x-auto max-h-[750px] w-full shadow-md sm:rounded-lg rounded-md border-2 border-gray-200">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
